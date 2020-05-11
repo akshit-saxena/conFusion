@@ -31,3 +31,6 @@ body {
 .navbar-dark {
   background-color: #512dab;
 }
+.text-black {
+  color: black;
+}
