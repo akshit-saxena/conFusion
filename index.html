@@ -66,7 +66,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="loginButton" role="button">
               <span class="fa fa-sign-in">
                 Login
               </span>
@@ -295,12 +295,9 @@
           <div class="col-12 col-sm-3 align-self-center">
             <button type="button" class="btn btn-block btn-warning">
               <a
-                data-target="#reserveModal"
                 class="text-black"
-                data-toggle="modal"
-                data-html="true"
+                id="reserveButton"
                 title=" Or call us at<br><strong>+852 12345678</strong>"
-                data-placement="bottom"
               >
                 <strong>Reserve Table</strong></a
               >
@@ -573,6 +570,15 @@
             $('#carouselButton').children('span').removeClass('fa-play');
             $('#carouselButton').children('span').addClass('fa-pause');
           }
+        });
+        // $('[data-toggle="tooltip"]').tooltip();
+
+        $('#reserveButton').click(function () {
+          $('#reserveModal').modal('show');
+        });
+
+        $('#loginButton').click(function () {
+          $('#loginModal').modal('show');
         });
       });
     </script>
